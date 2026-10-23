@@ -9,4 +9,4 @@ def test_health():
 def test_calculate():
     r = client.post("/calculate", json={"principal": 100000, "rate": 7, "years": 1})
     assert r.status_code == 200
-    assert r.json()["maturity_amount"] > 100000
+    assert r.json()["maturity_amount"] > 999999
